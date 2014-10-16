@@ -1,6 +1,6 @@
 /* CSS declarations go here */
 body {
-  margin: 10% 0 0 0;
+  margin: 0;
   text-align: center;
   font-size: 14px;
   color: black;
@@ -17,32 +17,44 @@ ul {
 li {
     text-align:left;
 }
+#header {
+  text-align: right;
+  padding: 10px;
+  border-bottom: 1px solid #aaa;
+  background: #efefef;
+  line-height: 1.7em;
+}
+#header a {
+  color: #666;
+  text-decoration: none;
+}
 
+#header a img {
+  height: 13px;
+  position: relative;
+  top: -2px;
+  padding-right: 7px;
+}
+.left {
+  float: left;
+}
 #banner {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 #banner h1 {
-  font-size: 3em;
-  font-weight: 700;
-  font-family: Tahoma, Arial, Sans-serif;
-  line-height: 1em;
+  margin: 0;
 }
-#banner .first {
-  text-transform: uppercase;
-  color: red;
-}
-#banner .last {
-  text-transform: uppercase;
-  font-size: 1.5em;
+#banner img {
+  height: 60px;
 }
 #search {
   margin-bottom: 20px;
 }
 #search input {
   width: 80%;
-  max-width: 500px;
+  max-width: 490px;
   border: 1px solid #aaa;
-  padding: 10px;
+  padding: 5px;
 }
 #buttons {
   margin-bottom: 20px;
@@ -108,4 +120,12 @@ div.result {
 
 .clientListLink {
     color: #ef3e35;
+}
+
+.filterAlign {
+    float:left;
+}
+
+.filterAlign input {
+    margin-right: 5px;
 }
