@@ -15,10 +15,17 @@ if (Meteor.isClient) {
   });
 
   Template.search.events({
-    'click button': function(e){
-        console.log("performing search for: ", Meteor.user().profile);
+    'click button': function(e, tmpl){
         e.preventDefault();
-        Router.go('resultsPage');
+        var searchTerm = $(tmpl.find("#searchBox")).val();
+
+        console.log("performing search for: ", Meteor.user().profile);
+
+        if( searchTerm === "cigna"){
+          Router.go('clients');
+        }else{
+          Router.go('resultsPage');
+        }
     }
   });
 }
