@@ -1,17 +1,9 @@
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault("counter", 0);
-
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get("counter");
-    }
-  });
-
-  Template.hello.events({
-    'click button': function () {
-      console.log("Hello", Meteor.user.profile);
-      console.log("Tee hee hee");
+  Template.search.events({
+    'click button': function(e){
+        console.log("got btn click");
+        e.preventDefault();
+        Router.go('resultsPage');
     }
   });
 }
