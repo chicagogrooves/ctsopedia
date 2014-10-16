@@ -79,7 +79,7 @@ li {
   color:#555;
 }
 
-@media (max-width:550px) {
+@media (max-width:767px) {
     .result-number {
         margin:5px 15px 0 0;
     }
