@@ -8,31 +8,42 @@
         <div class="row">
             <div class="col-lg-12">
                 <ul class="nav nav-tabs" role="tablist">
-                    <li class="active"><a href="#invite" role="tab" data-toggle="tab">Floating</a></li>
-                    <li><a href="#edcc" role="tab" data-toggle="tab">Exit EDCC</a></li>
+                    <li class="active"><a href="#solutions" role="tab" data-toggle="tab">Solutions</a></li>
                     <li><a href="#conf" role="tab" data-toggle="tab">Conf Files</a></li>
-                    <li><a href="#goLive" role="tab" data-toggle="tab">Go Live</a></li>
+                    <li><a href="#key" role="tab" data-toggle="tab">Key Information</a></li>
                 </ul>
                     <!-- Tab panes -->
                 <div class="tab-content">
-                    <div class="tab-pane active" id="waypoint">
+                    <div class="tab-pane active" id="solutions">
                         <ul>
-                            <li>Name of comment cards used.</li>
-                            <li>Name of Thank You Template</li>
-                            <li><a href="http://www.cigna.com/about-us/">http://www.cigna.com/about-us</a></li>
+                            <li><span class="clientListName">Type of solution:</span> Floating</li>
+                            <li><span class="clientListName">Name of CC:</span> CIGNA.com (production) - default card</li>
+                            <li><span class="clientListName">Name of TY:</span> CIGNA.com - default thank you window</li>
+                            <li><span class="clientListName">Active:</span> http://my.cidgna.com</li>
+                            <li><img src="/img/cigna.png" class="responsive"/></li>
+                            <li><a href="http://www.cigna.com/about-us/" class="clientListLink">http://www.cigna.com/about-us</a></li>
                         </ul>
-                    </div>
-                    <div class="tab-pane" id="edcc">
                         <ul>
-                            <li>Name of comment card</li>
-                            <li>Name of Thank You Template</li>
+                            <li><span class="clientListName">Type of solution:</span> Inline</li>
+                            <li><span class="clientListName">Name of CC:</span> myCIGNA (production) - default (public) card</li>
+                            <li><span class="clientListName">Name of TY:</span> myCIGNA - Generic</li>
+                            <li><span class="clientListName">Active:</span> http://survey.mycigna.com</li>
+                            <li><img src="/img/cigna.png" class="responsive"/></li>
+                            <li><a href="http://www.cigna.com/about-us/" class="clientListLink">http://www.cigna.com/about-us</a></li>
                         </ul>
                     </div>
                     <div class="tab-pane" id="conf">
-                    <a href="#">Link to conf file</a>
+                        <ul>
+                            <li><a href="https://github.com/opinionlab/oo-code-sets/blob/master/Cigna/oo_conf.js">oo_conf.js</a></li>
+                            <li><a href="https://github.com/opinionlab/oo-code-sets/blob/master/Cigna/microsites/IMP-52/oinstallV5/onlineopinionV5/oo_conf_microsites.js">oo_conf_microsites.js</a></li>
+                        </ul>
                     </div>
-                    <div class="tab-pane" id="goLive">
-                    <a href="#">Link to conf file</a>
+                    <div class="tab-pane" id="key">
+                        <ul>
+                            <li><span class="clientListName">Active Contract Date:</span> 11/15/2011</li>
+                            <li><span class="clientListName">Contract Expired Date:</span>12/31/2014</li>
+                            <li><span class="clientListName">SSID:</span> cigna | cigna-isg</li>
+                        </ul>
                     </div>
                 </div><!--close tab content-->
             </div><!--close col-->

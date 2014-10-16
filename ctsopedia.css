@@ -5,6 +5,19 @@ body {
   font-size: 14px;
   color: black;
 }
+
+h1 {
+    font-family: 'Quattrocento Sans', Helvetica, Arial, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    text-align:left;
+}
+
 #banner {
   margin-bottom: 20px;
 }
@@ -39,4 +52,27 @@ div.result {
   padding: 40px;
   background: #efefef;
   border-top: 1px solid #aaa;
+}
+
+/*Client Style*/
+
+.nav-tabs a {
+    background-color: #e7e7e7;
+    color: #ef3e35;
+}
+
+.tab-pane ul {
+    padding-top: 25px;
+}
+
+.tab-pane li {
+    padding-top: 5px;
+}
+
+.clientListName {
+    font-weight: bold;
+}
+
+.clientListLink {
+    color: #ef3e35;
 }

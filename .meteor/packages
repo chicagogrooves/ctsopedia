@@ -11,4 +11,5 @@ accounts-ui
 mizzao:bootstrap-3
 accounts-base
 iron:router
+accounts-github
 

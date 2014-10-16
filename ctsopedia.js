@@ -1,7 +1,7 @@
 if (Meteor.isClient) {
   Template.search.events({
     'click button': function(e){
-        console.log("got btn click");
+        console.log("performing search for: ", Meteor.user().profile);
         e.preventDefault();
         Router.go('resultsPage');
     }
