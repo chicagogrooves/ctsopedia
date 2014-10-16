@@ -1,13 +1,64 @@
 <head>
-  <title>ctsopedia</title>
+  <title>CTSopedia</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style type="text/css">
+    body {
+      margin: 20% 0 0 0;
+      text-align: center;
+      font-size: 14px;
+      color: black;
+    }
+    #banner {
+      margin-bottom: 20px;
+    }
+    #banner h1 {
+      font-size: 3em;
+      font-weight: 700;
+      font-family: Tahoma, Arial, Sans-serif;
+      line-height: 1em;
+    }
+    #banner .first {
+      text-transform: uppercase;
+      color: red;
+    }
+    #banner .last {
+      text-transform: uppercase;
+      font-size: 1.5em;
+    }
+    #search {
+      margin-bottom: 20px;
+    }
+    #search input {
+      width: 80%;
+      max-width: 500px;
+      border: 1px solid #aaa;
+      padding: 10px;
+    }
+    #buttons {
+      clear: both;
+    }
+  </style>
 </head>
-
 <body>
-  <h1>Welcome to CTSOpedia!</h1>
-  {{> loginButtons }}
-  {{> hello}}
+  <form>
+    <div id="banner">
+      <h1><span class="first">cts</span><span class="last">opedia</span></h1>
+    </div>
+    <div id="search">
+      {{> searchInput}}
+    </div>
+    <div id="buttons">
+      {{> loginButtons }}
+      {{> searchBtn}}
+    </div>
+  </form>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
+<template name="searchBtn">
+  <button>Search Our Brains</button>
+</template>
+<template name="searchInput">
+  <input type="search" name="ctsSearch" />
 </template>
