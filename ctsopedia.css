@@ -60,22 +60,33 @@ li {
   margin-bottom: 20px;
   clear: both;
 }
-div.result {
+
+.result {
   padding: 10px 20px;
   text-align:left;
   background: #efefef;
   border-top: 1px solid #aaa;
 }
 
+.result-border-bottom {
+    border-bottom:1px solid #aaa;
+}
+
 .result-number {
-  display:inline-block;
+  float:left;
   vertical-align:top;
   margin:13px 15px 0 0;
   color:#555;
 }
 
+@media (max-width:550px) {
+    .result-number {
+        margin:5px 15px 0 0;
+    }
+}
+
 .result-type-logo {
-  display:inline-block;
+  float:left;
   vertical-align:top;
   margin:0 15px 0 0;
 }
@@ -84,8 +95,13 @@ div.result {
   width:44px;
 }
 
+@media (max-width:767px) {
+    .result-type-logo img {
+        width:32px;
+    }
+}
+
 .result-text-wrapper {
-  display:inline-block;
   overflow:hidden;
 }
 
