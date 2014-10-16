@@ -1,11 +1,14 @@
 if (Meteor.isClient) {
-  var scopes = [
-    'https://www.googleapis.com/auth/drive',
-    'https://www.googleapis.com/auth/drive.file',
-    'https://www.googleapis.com/auth/userinfo.email'
-  ];
 
-  Accounts.ui.config({'requestPermissions':{'google':scopes}});
+  Accounts.ui.config({
+    'requestPermissions': {
+      'google' : [
+        'https://www.googleapis.com/auth/drive',
+        'https://www.googleapis.com/auth/drive.file',
+        'https://www.googleapis.com/auth/userinfo.email'
+      ]
+    }
+  });
 
   Template.search.events({
     'click button': function(e){
