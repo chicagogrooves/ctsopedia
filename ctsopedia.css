@@ -49,9 +49,42 @@ li {
   clear: both;
 }
 div.result {
-  padding: 40px;
+  padding: 10px 20px;
+  text-align:left;
   background: #efefef;
   border-top: 1px solid #aaa;
+}
+
+.result-number {
+  display:inline-block;
+  vertical-align:top;
+  margin:13px 15px 0 0;
+  color:#555;
+}
+
+.result-type-logo {
+  display:inline-block;
+  vertical-align:top;
+  margin:0 15px 0 0;
+}
+
+.result-type-logo img {
+  width:44px;
+}
+
+.result-text-wrapper {
+  display:inline-block;
+  overflow:hidden;
+}
+
+.result-title {
+  font-size:16px;
+}
+
+.result-subtitle {
+  font-size:13px;
+  font-style:italic;
+  margin:3px 0 0 0;
 }
 
 /*Client Style*/
