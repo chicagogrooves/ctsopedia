@@ -3,21 +3,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="/js/oo_engine.min.js"></script>
+  <script>
+  var oo_feedback = new OOo.Ocode({});
+  </script>
 </head>
 <body>
+  <div id="header">
+    <div class="left"><a href="javascript:void(0)" onclick="oo_feedback.show()"><img src="/img/oo_icon.gif" alt="Feedback" />Feedback</a></div>
+    {{> loginButtons}}
+  </div>
+  <div id="banner">
+    <h1><img src="/img/opedia_logo.png" alt="ctsOpedia" /></h1>
+  </div>
 </body>
 
 <template name="search">
   <form>
-    <div id="banner">
-      <h1><img src="/img/opedia_logo.png" alt="ctsOpedia" /></h1>
-    </div>
     <div id="search">
       {{> searchInput}}
     </div>
     <div id="buttons">
-      {{> loginButtons}}
-      <button>Search Our Brains</button>
+      <button>Feed Your Brain</button>
     </div>
   </form>
 </template>
