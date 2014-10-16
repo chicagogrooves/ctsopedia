@@ -8,4 +8,7 @@ Router.map(function() {
   this.route("clients", {
     path: "/clients"
   });
+  this.route("filter", {
+    path: "/filter"
+  });
 });
