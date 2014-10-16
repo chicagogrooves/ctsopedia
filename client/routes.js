@@ -5,4 +5,7 @@ Router.map(function() {
   this.route("results", {
     path: "/results"
   });
+  this.route("clientSolutions", {
+    path: "/clientSolutions"
+  })
 });
