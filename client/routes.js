@@ -1,8 +1,8 @@
 Router.map(function() {
-  this.route("hello", {
+  this.route("search", {
     path: "/"
   });
-  this.route("results", {
+  this.route("resultsPage", {
     path: "/results"
   });
   this.route("clients", {

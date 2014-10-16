@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
+</body>
+
+<template name="search">
   <form>
     <div id="banner">
       <h1><span class="first">cts</span><span class="last">opedia</span></h1>
@@ -14,16 +17,9 @@
     </div>
     <div id="buttons">
       {{> loginButtons}}
-      {{> searchBtn}}
-    </div>
-    <div id="results">
-      {{> results}}
+      <button>Search Our Brains</button>
     </div>
   </form>
-</body>
-
-<template name="searchBtn">
-  <button>Search Our Brains</button>
 </template>
 <template name="searchInput">
   <input type="search" name="ctsSearch" />
