@@ -10,7 +10,8 @@ if (Meteor.isClient) {
 
   Template.hello.events({
     'click button': function () {
-      console.log("Tee hee hee")
+      console.log("Hello", Meteor.user.profile);
+      console.log("Tee hee hee");
     }
   });
 }

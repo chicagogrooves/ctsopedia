@@ -6,3 +6,7 @@
 meteor-platform
 autopublish
 insecure
+accounts-google
+accounts-ui
+mizzao:bootstrap-3
+
