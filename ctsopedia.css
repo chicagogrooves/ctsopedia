@@ -88,3 +88,11 @@ div.result {
 .clientListLink {
     color: #ef3e35;
 }
+
+.filterAlign {
+    float:left;
+}
+
+.filterAlign input {
+    margin-right: 5px;
+}

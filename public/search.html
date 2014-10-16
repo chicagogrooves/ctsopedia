@@ -73,20 +73,33 @@
         return false;
       }
 
+    // call retrieveAllFiles( function(result){ console.log(result); });
+    function retrieveAllFiles(callback) {
+      var retrievePageOfFiles = function(request, result) {
+        request.execute(function(resp) {
+          result = result.concat(resp.items);
+          var nextPageToken = resp.nextPageToken;
+          if (nextPageToken) {
+            request = gapi.client.drive.files.list({
+              'pageToken': nextPageToken
+            });
+            retrievePageOfFiles(request, result);
+          } else {
+            callback(result);
+          }
+        });
+      }
+      var initialRequest = gapi.client.drive.files.list();
+      retrievePageOfFiles(initialRequest, []);
+    }
+
+
       // Load the API and make an API call.  Display the results on the screen.
       function makeApiCall() {
-        gapi.client.load('plus', 'v1', function() {
-          var request = gapi.client.plus.people.get({
-            'userId': 'me'
-          });
-          request.execute(function(resp) {
-            var heading = document.createElement('h4');
-            var image = document.createElement('img');
-            image.src = resp.image.url;
-            heading.appendChild(image);
-            heading.appendChild(document.createTextNode(resp.displayName));
-
-            document.getElementById('content').appendChild(heading);
+        gapi.client.load('drive', 'v2', function() {
+          console.log("Google Drive API workses..")
+          retrieveAllFiles(function(result){
+            console.log("Your files:", result);
           });
         });
       }
