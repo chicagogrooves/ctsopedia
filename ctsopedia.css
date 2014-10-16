@@ -5,6 +5,19 @@ body {
   font-size: 14px;
   color: black;
 }
+
+h1 {
+    font-family: 'Quattrocento Sans', Helvetica, Arial, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    text-align:left;
+}
+
 #banner {
   margin-bottom: 20px;
 }
