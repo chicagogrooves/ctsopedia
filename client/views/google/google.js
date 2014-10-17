@@ -1,5 +1,6 @@
 //this variable will hold the preauthorized google drive api object
 var driveApi;
+window.driveApi = driveApi;
 
 var throttledSearch = _.throttle(function(e, tmpl){
   var term = $(tmpl.find("input.gSearch")).val();
@@ -26,6 +27,12 @@ Template.gSearch.rendered = function(){
 
 Template.gSearch.events({
   "keyup .gSearch": throttledSearch
+});
+Template.gResults.events({
+  "click .resultWatch": function(e,tmpl){
+    e.preventDefault();
+    console.log("TODO- watch " + this.id);
+  }
 });
 Template.gResults.helpers({
   "results": function(){
