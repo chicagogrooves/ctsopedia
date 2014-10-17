@@ -11,4 +11,7 @@ Router.map(function() {
   this.route("filter", {
     path: "/filter"
   });
+  this.route("google", {
+    path: "/google"
+  });
 });
