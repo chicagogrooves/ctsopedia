@@ -1,0 +1,12 @@
+<template name="motd-admin">
+  <textarea rows="5" cols="50">{{motd}}</textarea>
+  <button>Save</button>
+</template>
+
+<template name="motd">
+  {{#if motd}}
+  <div class="motd">
+    {{motd}}
+  </div>
+  {{/if}}
+</template>

@@ -13,3 +13,6 @@ Router.map ->
 
   @route "google",
     path: "/google"
+
+  @route "motd-admin",
+    path: "/motd"
