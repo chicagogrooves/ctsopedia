@@ -1,9 +1,39 @@
 <template name="google">
-  {{> search }}
-  See console for goodness. Soon, render results!
+  {{> gSearch }}
+  {{> gResults }}
+</template>
+
+<template name="gSearch">
+  <form>
+    <div id="search">
+      <input class="gSearch" type="search" name="ctsSearch" id="searchBox" placeholder="Ex: surrogate"/>
+    </div>
+    <div id="buttons">
+      <button>Feed My Brain</button>
+    </div>
+  </form>
 </template>
 
 <template name="gResults">
-  {{#each result}}
+
+  <div id="results">
+  {{#each results}}
+  <div class="result">
+    <div class="result-type-logo">
+      <img src="{{ownerPhoto}}" />
+      <img src="{{iconLink}}" />
+      <img src="{{thumbnailLink}}" />
+      <img src="{{lastModifiedPhoto}}" />
+    </div>
+    <div class="result-text-wrapper">
+      <div class="result-title">
+        <a target="_blank" href="{{alternateLink}}">{{title}}</a>
+      </div>
+      <div class="result-subtitle">
+        Subtitle?...preview of text? Date of item? Do we want information here?
+      </div>
+    </div>
+  </div>
   {{/each}}
+  </div>
 </template>
