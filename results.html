@@ -5,6 +5,35 @@
   </div>
 </template>
 <template name="results">
+  <script>
+    $(document).on("gdriveready", function(e, driveApi){
+      console.debug("Ready to query Google Drive files (results page)..");
+      driveApi.files.list({
+        q: "title contains '" + "surr" + "'"
+      }).execute( updateUi );
+
+      function updateUi(results){
+        var docTitles = _.pluck(results.items, "title");
+        Session.set("gdrive-results", docTitles);
+        console.log(docTitles);
+      }
+
+      //@eigenhombre - is this the kind of thing you'd use a macro for?
+      function reAuthWrap( callback, reAuthFn ){
+        return function (response){
+          if(response.error && response.error.code == 401){
+            console.info("Your google session has expired, reauthenticating...");
+            reAuthFn.call(null);
+          }
+          else if(response.error){
+            console.error("Uknnown Google API error");
+          } else {
+            callback.call(response)
+          }
+        };
+      }
+    });
+  </script>
   <div class="result">
     <div class="result-number">
       1
