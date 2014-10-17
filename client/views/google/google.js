@@ -3,7 +3,7 @@ var driveApi;
 
 var throttledSearch = _.throttle(function(e, tmpl){
   var term = $(tmpl.find("input.gSearch")).val();
-  console.log("Searching " + term + " ..");
+  console.log("Searching " + term + " into window.lastSearchResults");
 
   driveApi.files.list({
     q: "title contains '" + term.replace("'", "") + "'"
@@ -13,7 +13,6 @@ var throttledSearch = _.throttle(function(e, tmpl){
 function updateUi(results){
   var docTitles = _.pluck(results.items, "title");
   Session.set("gdrive-results", results.items);
-  console.log("Inspect window.lastSearchResults for data");
   window.lastSearchResults = results.items;
 }
 
