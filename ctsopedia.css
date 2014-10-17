@@ -120,6 +120,12 @@ li {
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+
+  background-color: #ffc;
+  border-radius: 3px;
+  border: solid #aaa 1px;
+  margin-top: 8px;
+  margin-left: 3px;
 }
 
 /*Client Style*/
