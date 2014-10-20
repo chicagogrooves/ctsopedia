@@ -2,14 +2,19 @@
 var driveApi;
 window.driveApi = driveApi;
 
-var throttledSearch = _.throttle(function(e, tmpl){
+var doSearch = function(e, tmpl){
   var term = $(tmpl.find("input.gSearch")).val();
+  if(term===""){
+    updateUi({items: []});
+    return;
+  }
+
   console.log("Searching " + term + " into window.lastSearchResults");
 
-  driveApi.files.list({
-    q: "title contains '" + term.replace("'", "") + "'"
-  }).execute( updateUi );
-}, 250, {leading: false});
+  driveApi.files
+    .list({ q: "title contains '" + term.replace("'", "") + "'"})
+    .execute( updateUi );
+};
 
 function updateUi(results){
   var docTitles = _.pluck(results.items, "title");
@@ -26,7 +31,11 @@ Template.gSearch.rendered = function(){
 };
 
 Template.gSearch.events({
-  "keyup .gSearch": throttledSearch
+  "keyup .gSearch": _.throttle(doSearch, 250, {leading: false}),
+  "click button": function(e){
+    // autocomplete makes button irrelevant
+    e.preventDefault();
+  }
 });
 Template.gResults.events({
   "click .resultWatch": function(e,tmpl){
