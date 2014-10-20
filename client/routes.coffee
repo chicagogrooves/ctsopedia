@@ -1,18 +1,18 @@
 Router.map ->
-  @route "search",
+  @route "google",
     path: "/"
+
+  @route "filter",
+    path: "/filter"
+
+  @route "search",
+    path: "/demo"
 
   @route "resultsPage",
     path: "/results"
 
   @route "clients",
     path: "/clients"
-
-  @route "filter",
-    path: "/filter"
-
-  @route "google",
-    path: "/google"
 
   @route "motd-admin",
     path: "/motd"
