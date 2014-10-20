@@ -4,6 +4,8 @@ window.driveApi = driveApi;
 
 var doSearch = function(e, tmpl){
   var term = $(tmpl.find("input.gSearch")).val();
+  var quotedTerm = "'" + term.replace("'", "") + "'";
+
   if(term===""){
     updateUi({items: []});
     return;
@@ -12,7 +14,11 @@ var doSearch = function(e, tmpl){
   console.log("Searching " + term + " into window.lastSearchResults");
 
   driveApi.files
-    .list({ q: "title contains '" + term.replace("'", "") + "'"})
+    .list({
+      q: "title contains " + quotedTerm + " or fullText contains " + quotedTerm,
+      corpus: "DOMAIN"
+
+    })
     .execute( updateUi );
 };
 
